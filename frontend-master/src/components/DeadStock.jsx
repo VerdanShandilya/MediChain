@@ -11,7 +11,7 @@ function DeadStock() {
     const fetchDeadStock = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await fetch('http://localhost:3000/api/medicine/deadstock', {
+        const response = await fetch('https://medi-chain-9x1d.vercel.app/api/medicine/deadstock', {
           headers: {
             'Authorization': `Bearer ${token}`
           }

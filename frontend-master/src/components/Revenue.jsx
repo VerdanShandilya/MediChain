@@ -12,7 +12,7 @@ const Revenue = () => {
     const fetchRevenueData = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await axios.get('http://localhost:3000/api/medicine/revenue',{
+        const response = await axios.get('https://medi-chain-9x1d.vercel.app/api/medicine/revenue',{
             headers: {
                 'Authorization': `Bearer ${token}`
             }

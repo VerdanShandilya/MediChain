@@ -57,7 +57,7 @@ const Addmedicine = () => {
 
     try {
       const data = await axios.post(
-        "http://localhost:3000/api/medicine/create",
+        "https://medi-chain-9x1d.vercel.app/api/medicine/create",
         obj,
         {
           headers: {

@@ -14,7 +14,7 @@ export default function AcceptShipment() {
 
         const token=JSON.parse(localStorage.getItem('user')).token;
 
-        const data=await axios.post("http://localhost:3000/api/medicine/accept", {
+        const data=await axios.post("https://medi-chain-9x1d.vercel.app/api/medicine/accept", {
             shipmentNo,
         },{
             headers: {

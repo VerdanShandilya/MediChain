@@ -28,7 +28,7 @@ export default function SignUp() {
       setLoading(true);
 
       const response = await axios.post(
-        `http://localhost:3000/api/signup`,
+        `https://medi-chain-9x1d.vercel.app/api/signup`,
         { name, email, password, location, contact, type }
       );
       console.log(data);
