@@ -23,14 +23,21 @@ const VendorSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    type:{
+        type:String,
+        required:true
     }
 });
 
-VendorSchema.statics.signup = async function(name, location, contact, email, password) {
+VendorSchema.statics.signup = async function(name, location, contact, email, password,type) {
     if (!name || !location || !contact || !email || !password) {
         throw new Error("All fields are required");
     }
-
+    if(!type)
+{
+    throw new Error("Type is required");
+}
     if (!validator.isEmail(email)) {
         throw new Error("Email is not valid");
     }
@@ -50,7 +57,8 @@ VendorSchema.statics.signup = async function(name, location, contact, email, pas
         location,
         contact,
         email,
-        password: hashedPassword
+        password: hashedPassword,
+        type
     });
     await vendor.save();
     return vendor;
