@@ -28,7 +28,7 @@ export default function SignUp() {
       setLoading(true);
 
       const response = await axios.post(
-        `https://medichain-0usn.onrender.com//api/signup`,
+        `https://medichain-0usn.onrender.com/api/signup`,
         { name, email, password, location, contact, type }
       );
       console.log(data);

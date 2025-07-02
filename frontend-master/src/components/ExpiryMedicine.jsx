@@ -22,7 +22,7 @@ const ExpiryMedicineChart = () => {
     const fetchExpiryData = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await fetch('https://medichain-0usn.onrender.com//api/medicine/categorywise', {
+        const response = await fetch('https://medichain-0usn.onrender.com/api/medicine/categorywise', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
