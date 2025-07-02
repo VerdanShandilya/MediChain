@@ -23,7 +23,7 @@ export default function ViewInventory() {
       }
       const token = JSON.parse(localStorage.getItem('user')).token;
 
-      const response = await axios.get("https://localhost:5000/api/medicine/", {
+      const response = await axios.get("https://medichain-0usn.onrender.com/api/medicine/", {
         headers: {
           Authorization: `Bearer ${token}`,
         }

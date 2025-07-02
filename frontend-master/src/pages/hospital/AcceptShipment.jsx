@@ -14,7 +14,7 @@ export default function AcceptShipment() {
 
         const token=JSON.parse(localStorage.getItem('user')).token;
 
-        const data=await axios.post("https://localhost:5000/api/medicine/accept", {
+        const data=await axios.post("https://medichain-0usn.onrender.com/api/medicine/accept", {
             shipmentNo,
         },{
             headers: {

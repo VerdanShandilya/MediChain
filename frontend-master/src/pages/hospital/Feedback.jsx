@@ -28,7 +28,7 @@ const Feedback = () => {
     console.log(selectedMedicine);
 
     try {
-      const data = await axios.post("https://localhost:5000/api/feedback/create", {
+      const data = await axios.post("https://medichain-0usn.onrender.com/api/feedback/create", {
         symptoms: formData.symptoms,
         side_effects: formData.sideEffects,
         hospital_name: selectedHospital,
@@ -51,7 +51,7 @@ const Feedback = () => {
 
   const fetchHospitals = async () => {
     try {
-      const response = await axios.get("https://localhost:5000/api/hospital/getAll");
+      const response = await axios.get("https://medichain-0usn.onrender.com/api/hospital/getAll");
       setHospitals(response.data);
     } catch (error) {
       console.error("Error fetching hospitals:", error);
@@ -61,7 +61,7 @@ const Feedback = () => {
   const fetchMedicine = async () => {
     try {
       const token = JSON.parse(localStorage.getItem("user")).token;
-      const response = await axios.get("https://localhost:5000/api/medicine/getAll", {
+      const response = await axios.get("https://medichain-0usn.onrender.com/api/medicine/getAll", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

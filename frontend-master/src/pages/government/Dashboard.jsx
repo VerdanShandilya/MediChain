@@ -25,7 +25,7 @@ export default function Dashboard() {
     const fetchMostSelling = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await fetch('https://localhost:5000/api/medicine/mostselling', {
+        const response = await fetch('https://medichain-0usn.onrender.com/api/medicine/mostselling', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -49,7 +49,7 @@ export default function Dashboard() {
     const fetchLeastSelling = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await fetch('https://localhost:5000/api/medicine/leastselling', {
+        const response = await fetch('https://medichain-0usn.onrender.com/api/medicine/leastselling', {
           headers: {
             'Authorization': `Bearer ${token}`
           }

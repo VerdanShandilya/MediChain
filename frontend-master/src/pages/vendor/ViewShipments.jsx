@@ -14,7 +14,7 @@ const ViewShipments = () => {
                 return;
             }
             const token=JSON.parse(localStorage.getItem('user')).token;
-            const response = await fetch('https://localhost:5000/api/shipment/getAll',{
+            const response = await fetch('https://medichain-0usn.onrender.com/api/shipment/getAll',{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

@@ -57,7 +57,7 @@ const Addmedicine = () => {
 
     try {
       const data = await axios.post(
-        "https://localhost:5000/api/medicine/create",
+        "https://medichain-0usn.onrender.com/api/medicine/create",
         obj,
         {
           headers: {

@@ -16,7 +16,7 @@ const ViewOrders = () => {
     const token = JSON.parse(localStorage.getItem("user")).token;
 
     try {
-      const response = await fetch("https://localhost:5000/api/purchase", {
+      const response = await fetch("https://medichain-0usn.onrender.com/api/purchase", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

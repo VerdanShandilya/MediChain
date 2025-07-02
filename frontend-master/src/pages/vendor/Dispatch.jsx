@@ -65,7 +65,7 @@ export default function AddPatient() {
 
     try {
       const token = JSON.parse(localStorage.getItem('user')).token;
-      const response = await axios.post('https://localhost:5000/api/shipment/create', purchaseData,{
+      const response = await axios.post('https://medichain-0usn.onrender.com/api/shipment/create', purchaseData,{
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -97,7 +97,7 @@ export default function AddPatient() {
     }
     const token = JSON.parse(localStorage.getItem('user')).token;
     try {
-      const response = await axios.get("https://localhost:5000/api/medicine/getAll", {
+      const response = await axios.get("https://medichain-0usn.onrender.com/api/medicine/getAll", {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -113,7 +113,7 @@ export default function AddPatient() {
   const fetchHospitals = async () => {
     setLoadingHospitals(true);
     try {
-      const response = await axios.get("https://localhost:5000/api/hospital/getAll");
+      const response = await axios.get("https://medichain-0usn.onrender.com/api/hospital/getAll");
       setHospitals(response.data);
     } catch (error) {
       console.error('Error fetching hospitals:', error);

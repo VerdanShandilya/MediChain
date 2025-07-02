@@ -12,7 +12,7 @@ const TrackShipment = () => {
     const fetchShipments = async () => {
         try {
             const token=JSON.parse(localStorage.getItem('user')).token;
-            const response = await fetch('https://localhost:5000/api/shipment/getAll',{
+            const response = await fetch('https://medichain-0usn.onrender.com/api/shipment/getAll',{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -23,7 +23,7 @@ const TrackShipment = () => {
             // Fetch status for each shipment
             const shipmentsWithStatus = await Promise.all(data.map(async (shipment) => {
                 try {
-                    const statusResponse = await fetch(`https://localhost:5000/api/shipmentTracking/getbyID/${shipment.shipment_number}`,{
+                    const statusResponse = await fetch(`https://medichain-0usn.onrender.com/api/shipmentTracking/getbyID/${shipment.shipment_number}`,{
                         headers: {
                             'Authorization': `Bearer ${token}`
                         }
