@@ -22,7 +22,7 @@ const ExpiryMedicineChart = () => {
     const fetchExpiryData = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await fetch('https://localhost:5000/api/medicine/categorywise', {
+        const response = await fetch('https://medi-chain-9x1d.vercel.app/api/medicine/categorywise', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
