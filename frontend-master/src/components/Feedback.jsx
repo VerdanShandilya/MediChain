@@ -13,7 +13,7 @@ export default function Feedback() {
     const fetchFeedback = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await fetch('https://medi-chain-9x1d.vercel.app/api/feedback/getAll', {
+        const response = await fetch('https://localhost:5000/api/feedback/getAll', {
           headers: {
             'Authorization': `Bearer ${token}`
           }

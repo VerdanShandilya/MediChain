@@ -16,7 +16,7 @@ const ViewOrders = () => {
     const token = JSON.parse(localStorage.getItem("user")).token;
 
     try {
-      const response = await fetch("https://medi-chain-9x1d.vercel.app/api/purchase", {
+      const response = await fetch("https://localhost:5000/api/purchase", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -182,3 +182,6 @@ const ViewOrders = () => {
 };
 
 export default ViewOrders;
+
+
+// https://medi-chain-9x1d.vercel.app

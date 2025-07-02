@@ -24,7 +24,7 @@ export default function Login() {
       setLoading(true);
 
       const response = await axios.post(
-        `https://medi-chain-9x1d.vercel.app/api/login`,
+        `https://localhost:5000/api/login`,
         { email, password, type }
       );
       const data = await response.data;
