@@ -8,7 +8,7 @@ const ShipmentDetail = ({ shipment, onClose }) => {
     useEffect(() => {
         const fetchTrackingData = async () => {
             try {
-                const response = await fetch(`https://medi-chain-9x1d.vercel.app/api/shipmentTracking/getbyID/${shipment.shipment_number}`);
+                const response = await fetch(`https://medichain-0usn.onrender.com/api/shipmentTracking/getbyID/${shipment.shipment_number}`);
                 const data = await response.json();
                 setTrackingData(data);
             } catch (error) {
