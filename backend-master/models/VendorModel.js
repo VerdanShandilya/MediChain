@@ -31,13 +31,14 @@ const VendorSchema = new Schema({
 });
 
 VendorSchema.statics.signup = async function(name, location, contact, email, password,type) {
+    console.log({ name, location, contact, email, password, type });
+
     if (!name || !location || !contact || !email || !password) {
         throw new Error("All fields are required");
     }
-    if(!type)
-{
-    throw new Error("Type is required");
-}
+    if(!type){
+        throw new Error("Type is required");
+    }
     if (!validator.isEmail(email)) {
         throw new Error("Email is not valid");
     }

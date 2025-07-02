@@ -14,17 +14,17 @@ const signupUser=async(req,res)=>{
     const {name,location,contact,email,password,type}=req.body;
     try{
         if(type==='Vendor'){
-            const vendor=await Vendor.signup(name,location,contact,email,password);
+            const vendor=await Vendor.signup(name,location,contact,email,password,type);
             const token=createtoken(vendor._id);
             res.status(200).json({token,type});
         }
         else if(type==='Hospital'){
-            const hospital=await Hospital.signup(name,location,contact,email,password);
+            const hospital=await Hospital.signup(name,location,contact,email,password,type);
             const token=createtoken(hospital._id);
             res.status(200).json({token,type});
         }
         else if(type==='Government'){
-            const government=await Government.signup(name,location,contact,email,password);
+            const government=await Government.signup(name,location,contact,email,password,type);
             const token=createtoken(government._id);
             res.status(200).json({token,type});
         }
